@@ -38,7 +38,6 @@ label{
 
 label:hover,
 label:hover~label,
-input:checked,
 input:checked~label{
     background: url("img/star2.png") no-repeat;
 }
