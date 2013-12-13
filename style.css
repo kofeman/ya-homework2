@@ -1,0 +1,42 @@
+/*
+Nikolay Starikov
+nickolay-starikov@ya.ru
+vk.com/nikolay_star
+*/
+
+
+.rating{
+    width: 100px;
+    margin: 40px auto 0;
+}
+
+input{
+   display: none; /* прячем инпуты */
+}
+
+label{
+    background: url("img/star.png") no-repeat;
+    width: 16px;
+    height: 16px;
+    margin-left: 1px;
+    cursor: url("img/cursor.png"), pointer;
+    -moz-transition: all .4s;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+    float: right; /* т.к. в html коде у нас элементы в обратном порядке, с помощью float:right порядок станет такимм, как надо */
+}
+
+/* при наведении на label:
+1) подсвечивается сам элемент
+2) все предыдущие лейблы также подсвечиваются
+3) подсвечивается выбранный элемент (checked)
+4) и все предыдущие перед выбранным
+ */
+
+label:hover,
+label:hover~label,
+input:checked,
+input:checked~label{
+    background: url("img/star2.png") no-repeat;
+}
